@@ -3,7 +3,7 @@ packages:
   - type: github_release
     repo_owner: lxc
     repo_name: incus
-    name: lxc/incus-migrate
+    name: lxc/incus/incus-migrate
     description: Tool for migrating existing systems into Incus
     version_constraint: "false"
     version_overrides:

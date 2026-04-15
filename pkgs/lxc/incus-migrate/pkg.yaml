@@ -1,8 +1,0 @@
-packages:
-  - name: lxc/incus-migrate@v6.23.0
-  - name: lxc/incus-migrate
-    version: v6.22.0
-  - name: lxc/incus-migrate
-    version: v0.2.0
-  - name: lxc/incus-migrate
-    version: v0.1.0

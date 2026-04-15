@@ -58941,6 +58941,37 @@ packages:
         github_artifact_attestations:
           signer_workflow: lxc/incus/\.github/workflows/release\.yml
   - type: github_release
+    repo_owner: lxc
+    repo_name: incus
+    name: lxc/incus/incus-migrate
+    description: Tool for migrating existing systems into Incus
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.1.0")
+        asset: "{{.OS}}.incus-migrate"
+        format: raw
+        supported_envs:
+          - linux
+          - amd64
+      - version_constraint: semver("< 6.23.0")
+        asset: bin.{{.OS}}.incus-migrate.{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+        supported_envs:
+          - linux
+      - version_constraint: "true"
+        asset: bin.{{.OS}}.incus-migrate.{{.Arch}}
+        format: raw
+        replacements:
+          amd64: x86_64
+          arm64: aarch64
+        supported_envs:
+          - linux
+        github_artifact_attestations:
+          signer_workflow: lxc/incus/\.github/workflows/release\.yml
+  - type: github_release
     repo_owner: lycheeverse
     repo_name: lychee
     description: Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more
