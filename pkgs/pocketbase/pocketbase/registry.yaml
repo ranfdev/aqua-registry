@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/aquaproj/aqua/main/json-schema/registry.json
+packages:
+  - type: github_release
+    repo_owner: pocketbase
+    repo_name: pocketbase
+    description: Open Source realtime backend in 1 file
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.6.9")
+        asset: pocketbase_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+        format: zip
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        files:
+          - name: pocketbase
+        supported_envs:
+          - linux/amd64
+          - linux/arm64
+          - darwin
+          - windows
+      - version_constraint: "true"
+        asset: pocketbase_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+        format: zip
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
+        files:
+          - name: pocketbase
+        replacements:
+          arm: armv7

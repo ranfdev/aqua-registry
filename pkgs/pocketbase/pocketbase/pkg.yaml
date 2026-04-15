@@ -1,0 +1,4 @@
+packages:
+  - name: pocketbase/pocketbase@v0.36.9
+  - name: pocketbase/pocketbase
+    version: v0.1.0

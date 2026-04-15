@@ -70856,6 +70856,9 @@ packages:
       asset: github_link_creator_{{trimV .Version}}_checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: pocketbase
+    repo_name: pocketbase
+  - type: github_release
     repo_owner: pomdtr
     repo_name: sunbeam
     description: Command-line launcher
