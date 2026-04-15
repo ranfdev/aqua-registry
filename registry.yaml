@@ -58951,9 +58951,8 @@ packages:
         asset: "{{.OS}}.incus-migrate"
         format: raw
         supported_envs:
-          - linux
-          - amd64
-      - version_constraint: semver("< 6.23.0")
+          - linux/amd64
+      - version_constraint: semver("<= 6.22.0")
         asset: bin.{{.OS}}.incus-migrate.{{.Arch}}
         format: raw
         replacements:
